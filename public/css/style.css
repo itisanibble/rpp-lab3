@@ -1,0 +1,60 @@
+*::selection {
+  background-color: transparent;
+}
+
+select {
+  width: 190px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+option {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+th,
+td {
+  text-align: center;
+}
+
+tr:hover td {
+  background-color: rgb(8, 82, 193);
+  color: white !important; /*por culpa de bs5*/
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+
+.btn-custom {
+  width: auto;
+  margin-top: 0;
+}
+
+input[type='checkbox'] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.abm span {
+  display: inline-block;
+  width: 150px;
+}

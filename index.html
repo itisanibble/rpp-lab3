@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RECUPERATORIO</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body class="body">
+  <form id="datos" class="container-fluid mt-3">
+    <header class="header">
+      <label for="datos-select">Filtrar por: </label>
+      <select id="datos-select">
+        <option value="todos">todos</option>
+        <option value="terrestre">terrestre</option>
+        <option value="aereo">aereo</option>
+      </select>
+      <div>
+        <label for="">Calcular velocidadMaxima promedio: </label>
+        <input type="number" id="velocidadMaxima-promedio" readonly>
+        <input type="button" value="Calcular velocidadMaxima" id="calcular-velocidadMaxima"
+          class="btn btn-primary btn-custom">
+      </div>
+    </header>
+    <p class="my-0">Mostrar Columnas</p>
+    <h3 class="mt-2 mb-0">Form Datos</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><label for="id">id</label><input type="checkbox" checked id="id"></th>
+          <th><label for="modelo">modelo</label><input type="checkbox" checked id="modelo"></th>
+          <th><label for="añoFabricacion">añoFabricacion</label><input type="checkbox" checked id="añoFabricacion"></th>
+          <th><label for="velocidadMaxima">velocidadMaxima</label><input type="checkbox" checked id="velocidadMaxima">
+          </th>
+          <th><label for="alturaMaxima">alturaMaxima</label><input type="checkbox" checked id="alturaMaxima">
+          </th>
+          <th><label for="autonomia">autonomia</label><input type="checkbox" checked id="autonomia"></th>
+          <th><label for="cantidadPuertas">cantidadPuertas</label><input type="checkbox" checked id="cantidadPuertas">
+          </th>
+          <th><label for="cantidadRuedas">cantidadRuedas</label><input type="checkbox" checked id="cantidadRuedas">
+          </th>
+        </tr>
+        <tr>
+          <th><input type="button" class="sort-buttons btn btn-primary" value="id" class="outline"></th>
+          <th><input type="button" class="sort-buttons btn btn-primary" value="modelo" class="outline"></th>
+          <th><input type="button" class="sort-buttons btn btn-primary" value="añoFabricacion" class="outline">
+          </th>
+          <th><input type="button" class="sort-buttons btn btn-primary" value="velocidadMaxima" class="outline">
+          </th>
+          <th><input type="button" class="sort-buttons btn btn-primary" value="alturaMaxima" class="outline">
+          </th>
+          <th><input type="button" class="sort-buttons btn btn-primary" value="autonomia" class="outline"></th>
+          <th><input type="button" class="sort-buttons btn btn-primary" value="cantidadPuertas" class="outline">
+          </th>
+          <th><input type="button" class="sort-buttons btn btn-primary" value="cantidadRuedas" class="outline">
+          </th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+
+      </tbody>
+    </table>
+    <input type="button" value="agregar" id="abm-agregar" class="btn btn-primary">
+  </form>
+  <form id="abm" class="abm container mt-3">
+    <h3 class="mt-2 mb-0">Form ABM</h3>
+    <label><span>id: </span><input type="text" class="abm-inputs" id="abm-id" disabled></label>
+    <label><span>modelo: </span><input type="text" class="abm-inputs" id="abm-modelo"></label>
+    <label><span>añoFabricacion: </span><input type="text" class="abm-inputs" id="abm-añoFabricacion"></label>
+    <label><span>velocidadMaxima: </span><input type="text" class="abm-inputs" id="abm-velocidadMaxima"></label>
+    <label><span>tipo:</span>
+      <select id="abm-select">
+        <option value="terrestre">terrestre</option>
+        <option value="aereo">aereo</option>
+      </select>
+    </label>
+    <div id="abm-aereo">
+      <label><span>cantidadRuedas: </span><input type="text" class="abm-inputs" id="abm-cantidadRuedas"></label>
+      <label><span>cantidadPuertas: </span><input type="text" class="abm-inputs" id="abm-cantidadPuertas"></label>
+    </div>
+    <div id="abm-terrestre">
+      <label><span>alturaMaxima: </span><input type="text" class="abm-inptus" id="abm-alturaMaxima"></label>
+      <label><span>autonomia: </span><input type="text" class="abm-inptus" id="abm-autonomia"></label>
+    </div>
+    <div>
+      <input class="btn btn-success" type="button" value="alta" id="abm-alta">
+      <input class="btn btn-primary" type="button" value="modificar" id="abm-modificar">
+      <input class="btn btn-danger" type="button" value="eliminar" id="abm-eliminar">
+      <input class="btn btn-warning" type="button" value="cancelar" id="abm-cancelar">
+    </div>
+  </form>
+  <script src="public/js/app.js" type="module"></script>
+</body>
+
+</html>
